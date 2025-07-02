@@ -1,0 +1,10 @@
+/.vscode
+/wasm
+/external
+/platform
+
+draw.tldr
+minshell.html
+linuxBuild.bash
+test.bash
+runner.bash
