@@ -25,26 +25,20 @@
         <meta content=https://www.raylib.com/games.html name=twitter:url>
         <meta content="New raylib web videogame, developed using raylib videogames library" name=twitter:description>
         <link href=https://www.raylib.com/favicon.ico rel="shortcut icon">
-        <style>
-            body {
-                margin: 0;
-                overflow: hidden;
-                background-color: #000
-            }
-
-            canvas.emscripten {
-                border: 0 none;
-                background-color: #000
-            }
-        </style>
+        <link rel="stylesheet" href="./style.css">
         <script src=https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js/dist/FileSaver.min.js></script>
         <script>function saveFileFromMEMFSToDisk(e, a) { var i, o = FS.readFile(e); i = new Blob([o.buffer], { type: "application/octet-binary" }), saveAs(i, a) }</script>
     </head>
 
-    <body><canvas class=emscripten id=canvas oncontextmenu=event.preventDefault() tabindex=-1></canvas>
-        <p id=output>
-            <script>var Module = { print: function () { var e = document.getElementById("output"); return e && (e.value = ""), function (n) { arguments.length > 1 && (n = Array.prototype.slice.call(arguments).join(" ")), console.log(n), e && (e.value += n + "\n", e.scrollTop = e.scrollHeight) } }(), canvas: document.getElementById("canvas") }</script>
-            <script src=index.js async></script>
+    <body>
+        <div id="game-screen">
+            <canvas class=emscripten id=canvas oncontextmenu=event.preventDefault() tabindex=-1></canvas>
+            <p id=output>
+                <script>
+                    var Module = { print: function () { var e = document.getElementById("output"); return e && (e.value = ""), function (n) { arguments.length > 1 && (n = Array.prototype.slice.call(arguments).join(" ")), console.log(n), e && (e.value += n + "\n", e.scrollTop = e.scrollHeight) } }(), canvas: document.getElementById("canvas") }
+                </script>
+                <script src=index.js async></script>
+        </div>
     </body>
 
     </html>
