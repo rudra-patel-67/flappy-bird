@@ -3,8 +3,9 @@
 /external
 /platform
 
-draw.tldr
+./draw.tldr
 minshell.html
 linuxBuild.bash
 test.bash
 runner.bash
+Makefile
