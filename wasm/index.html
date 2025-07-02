@@ -4,7 +4,7 @@
     <head>
         <meta charset=utf-8>
         <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
-        <title>Flappy Bird made with Raylib & ❤️</title>
+        <title>raylib web game</title>
         <meta content="raylib web game" name=title>
         <meta content="New raylib web videogame, developed using raylib videogames library" name=description>
         <meta content="raylib, programming, examples, html5, C, C++, library, learn, games, videogames" name=keywords>
@@ -32,12 +32,10 @@
 
     <body>
         <div id="game-screen">
-            <canvas class=emscripten id=canvas oncontextmenu=event.preventDefault() tabindex=-1></canvas>
-            <p id=output>
-                <script>
-                    var Module = { print: function () { var e = document.getElementById("output"); return e && (e.value = ""), function (n) { arguments.length > 1 && (n = Array.prototype.slice.call(arguments).join(" ")), console.log(n), e && (e.value += n + "\n", e.scrollTop = e.scrollHeight) } }(), canvas: document.getElementById("canvas") }
-                </script>
-                <script src=index.js async></script>
+        <canvas class=emscripten id=canvas oncontextmenu=event.preventDefault() tabindex=-1></canvas>
+        <p id=output>
+            <script>var Module = { print: function () { var e = document.getElementById("output"); return e && (e.value = ""), function (n) { arguments.length > 1 && (n = Array.prototype.slice.call(arguments).join(" ")), console.log(n), e && (e.value += n + "\n", e.scrollTop = e.scrollHeight) } }(), canvas: document.getElementById("canvas") }</script>
+            <script src=index.js async></script>
         </div>
     </body>
 
